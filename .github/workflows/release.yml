@@ -33,7 +33,7 @@ jobs:
           
       - name: Copy Assets
         run:
-          xcopy .\icon.png .\build\dict.dist\icon.png /y
+          xcopy .\assets\ .\build\dict.dist\assets\ /s/y
           
       - name: Zip Build
         uses: TheDoctor0/zip-release@0.6.2

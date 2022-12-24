@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setWindowIcon(QIcon(f'./icon.png'))
+        self.setWindowIcon(QIcon(f'./assets/icon.png'))
         self.sig = MainWindowSignal()
         self.sig.update_loadprogress.connect(self.handle_update_loadprogress)
         self.sig.finish_loadprogress.connect(self.handle_finish_loadprogress)
@@ -155,7 +155,7 @@ class LoadDataThread(QThread):
 
     def run(self) -> None:
         time_start = time.time()
-        with open('dict.csv', encoding='utf-8') as f:
+        with open('./assets/dict.csv', encoding='utf-8') as f:
             reader = csv.reader(f)
             count = 0
             for item in reader:
