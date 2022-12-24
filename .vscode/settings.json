@@ -1,0 +1,15 @@
+{
+    "qtForPython.designer.path": "${workspaceFolder}\\.venv\\Lib\\site-packages\\PySide6\\designer.exe",
+    "qtForPython.rcc.path": "${workspaceFolder}\\.venv\\Lib\\site-packages\\PySide6\\rcc.exe",
+    "qtForPython.uic.options": [
+        "-o",
+        "${resourceDirname}${pathSeparator}ui_${resourceBasenameNoExtension}.py",
+        "-g",
+        "python"
+    ],
+    "qtForPython.uic.path": "${workspaceFolder}\\.venv\\Lib\\site-packages\\PySide6\\uic.exe",
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{column_limit: 120}"
+    ]
+}
