@@ -132,6 +132,16 @@
      <string>搜</string>
     </property>
    </widget>
+   <widget class="QTextBrowser" name="text_definition">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>291</width>
+      <height>231</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

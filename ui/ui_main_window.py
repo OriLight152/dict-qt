@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QLabel, QLineEdit,
     QListWidget, QListWidgetItem, QMainWindow, QPushButton,
-    QSizePolicy, QWidget)
+    QSizePolicy, QTextBrowser, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -60,6 +60,9 @@ class Ui_MainWindow(object):
         self.btn_search = QPushButton(self.centralwidget)
         self.btn_search.setObjectName(u"btn_search")
         self.btn_search.setGeometry(QRect(360, 40, 31, 31))
+        self.text_definition = QTextBrowser(self.centralwidget)
+        self.text_definition.setObjectName(u"text_definition")
+        self.text_definition.setGeometry(QRect(400, 70, 291, 231))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)

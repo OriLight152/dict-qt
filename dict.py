@@ -72,15 +72,28 @@ class MainWindow(QMainWindow):
         try:
             data = dict_all[search_result[self.ui.list_search.currentIndex().row()]]
             self.ui.label_word.setText(data['word'])
-            self.ui.label_translation.setText(data['translation'].replace('\\n', '\n').replace('\\r', ''))
+            text = ''
+            if (data['tag'] != ''):
+                text += '标签：' + data['tag'].replace('zk', '中考').replace('gk', '高考').replace('ky', '考研').replace(
+                    'ielts', '雅思').replace('toefl', '托福').upper() + '\n\n'
+            if (data['translation'] != ''):
+                text += '释义（中）：\n' + data['translation'].replace('\\n', '\n').replace('\\r', '') + '\n\n'
+            if (data['definition'] != ''):
+                text += '释义（英）：\n' + data['definition'].replace('\\n', '\n').replace('\\r', '') + '\n\n'
+            # self.ui.label_translation.setText(text)
+            self.ui.text_definition.setText(text)
         except:
             pass
 
     def refresh_list(self):
         self.ui.list_search.clear()
+        e = False
         for item in search_result:
+            e=True
             data = dict_all[item]
             self.ui.list_search.addItem(data['word'] + ' ' + data['translation'].replace('\\n', ' '))
+        if e:
+            self.ui.list_search.setCurrentRow(0)
 
 
 class SearchThread(QThread):
@@ -159,7 +172,7 @@ class LoadDataThread(QThread):
             reader = csv.reader(f)
             count = 0
             for item in reader:
-                dict_all.append({'word': item[0], 'translation': item[3]})
+                dict_all.append({'word': item[0], 'definition': item[2], 'translation': item[3], 'tag': item[7]})
                 count += 1
                 if (count >= 1024):
                     self.signal.emit(f'词典加载中，已加载 {len(dict_all)} 条数据')
