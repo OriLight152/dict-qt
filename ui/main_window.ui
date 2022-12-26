@@ -37,7 +37,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>381</width>
+      <width>251</width>
       <height>21</height>
      </rect>
     </property>
@@ -140,6 +140,19 @@
       <width>291</width>
       <height>231</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_opencustomdictmanager">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>管理自定义词典数据</string>
     </property>
    </widget>
   </widget>

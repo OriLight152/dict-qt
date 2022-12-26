@@ -35,7 +35,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.label_status = QLabel(self.centralwidget)
         self.label_status.setObjectName(u"label_status")
-        self.label_status.setGeometry(QRect(10, 10, 381, 21))
+        self.label_status.setGeometry(QRect(10, 10, 251, 21))
         self.edit_search = QLineEdit(self.centralwidget)
         self.edit_search.setObjectName(u"edit_search")
         self.edit_search.setGeometry(QRect(10, 40, 351, 31))
@@ -63,6 +63,9 @@ class Ui_MainWindow(object):
         self.text_definition = QTextBrowser(self.centralwidget)
         self.text_definition.setObjectName(u"text_definition")
         self.text_definition.setGeometry(QRect(400, 70, 291, 231))
+        self.btn_opencustomdictmanager = QPushButton(self.centralwidget)
+        self.btn_opencustomdictmanager.setObjectName(u"btn_opencustomdictmanager")
+        self.btn_opencustomdictmanager.setGeometry(QRect(260, 10, 131, 21))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -80,5 +83,6 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.option_enablefuzzysearch.setText(QCoreApplication.translate("MainWindow", u"\u6a21\u7cca\u641c\u7d22\uff08\u53ef\u80fd\u4f1a\u589e\u52a0\u641c\u7d22\u7528\u65f6\u6216\u5bfc\u81f4\u7a0b\u5e8f\u5d29\u6e83\uff09", None))
         self.btn_search.setText(QCoreApplication.translate("MainWindow", u"\u641c", None))
+        self.btn_opencustomdictmanager.setText(QCoreApplication.translate("MainWindow", u"\u7ba1\u7406\u81ea\u5b9a\u4e49\u8bcd\u5178\u6570\u636e", None))
     # retranslateUi
 
